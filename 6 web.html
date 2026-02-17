@@ -1,0 +1,196 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Products</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Section */
+    main {
+      padding: 1rem;
+    }
+
+    section.products {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    article.product {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
+
+    article.product:hover {
+      transform: translateY(-5px);
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    h3 {
+      margin: 1rem;
+      font-size: 1.2rem;
+      color: #2e7d32;
+    }
+
+    p.description {
+      margin: 0 1rem 1rem;
+      color: #555;
+    }
+
+    strong.price {
+      margin: 0 1rem 1rem;
+      font-size: 1.1rem;
+      color: #000;
+    }
+
+    button {
+      margin: 0 1rem 1rem;
+      padding: 0.6rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #2e7d32;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #1b5e20;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Media Queries */
+    @media (min-width: 576px) {
+      section.products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 992px) {
+      section.products {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Grocery Products</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="products">
+
+    <article class="product">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Organic Apples">
+      </figure>
+      <h3>Organic Apples</h3>
+      <p class="description">Fresh and juicy organic apples, perfect for daily snacks.</p>
+      <strong class="price">$4.99</strong>
+      <button>Add to Cart</button>
+    </article>
+
+    <article class="product">
+      <figure>
+        <img src="https://www.freshconnection.com.au/cdn/shop/products/image_21cd98e2-524e-4783-93fa-ae9b748b5859_1372x3840.jpg?v=1601878200" alt="Fresh Milk 2L">
+      </figure>
+      <h3>Fresh Milk (2L)</h3>
+      <p class="description">Pure and fresh milk ideal for breakfast and cooking.</p>
+      <strong class="price">$3.50</strong>
+      <button>Add to Cart</button>
+    </article>
+
+    <article class="product">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec" alt="Brown Bread Loaf">
+      </figure>
+      <h3>Brown Bread Loaf</h3>
+      <p class="description">Soft wholegrain brown bread baked fresh daily.</p>
+      <strong class="price">$2.80</strong>
+      <button>Add to Cart</button>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Grocery Store. All rights reserved.
+</footer>
+
+</body>
+</html>
